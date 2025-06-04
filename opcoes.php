@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
@@ -9,47 +9,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include('navbar.php'); ?>
 </head>
 <body>
-  <header class="navbar">
-    <a href="#" class="logo"><img src="img/logo.webp" alt=""></a>
-    <div class="nav-icons">
-      <a href="#"><img src="img/menu.svg" alt=""></a>
-    </div>
-  </header>
 <div class="carrossel">
     <div class="container" id="container">
         <div class="item" id="usuario">
             <h1>Usuario</h1>
-            <p>Clique abaixo para cadastrar <br> um novo usuario no site</p> 
+            <p>Clique abaixo para cadastrar <br> um novo usuario no site</p>
             <button id="cadastrar">Cadastrar</button>
         </div>
         <div class="item" id="aluno">
             <h1>Aluno</h1>
-            <p>Clique abaixo para cadastrar <br> um novo aluno no site</p> 
+            <p>Clique abaixo para cadastrar <br> um novo aluno no site</p>
             <button id="cadastrar">Cadastrar</button>
         </div>
         <div class="item" id="professor">
             <h1>Professor</h1>
-            <p>Clique abaixo para cadastrar <br> um novo professor no site</p> 
+            <p>Clique abaixo para cadastrar <br> um novo professor no site</p>
             <button id="cadastrar">Cadastrar</button>
         </div>
         <div class="item" id="disciplina">
             <h1>Disciplina</h1>
-            <p>Clique abaixo para cadastrar <br> uma nova disciplina</p> 
+            <p>Clique abaixo para cadastrar <br> uma nova disciplina</p>
             <button id="cadastrar">Cadastrar</button>
         </div>
         <div class="item" id="turma">
             <h1>Turma</h1>
-            <p>Clique abaixo para cadastrar <br> uma nova turma</p> 
+            <p>Clique abaixo para cadastrar <br> uma nova turma</p>
             <button id="cadastrar">Cadastrar</button>
         </div>
     </div>
-    <button class="btn prev" onclick="mover(-1)">&#10094;</button>
-    <button class="btn next" onclick="mover(1)">&#10095;</button>
+ 
 </div>
-
-
+     <button class="btn prev" onclick="mover(-1)">&#10094;</button>
+     <button class="btn next" onclick="mover(1)">&#10095;</button>
+ 
 <script src="opcoes.js"></script>
 </body>
 </html>
