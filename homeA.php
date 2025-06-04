@@ -12,25 +12,29 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="item" id="usuario">
-            <h1>Materiais</h1>
-            <p>Clique abaixo para cadastrar <br> um novo usuario no site</p>
- 
-        </div>
-        <div class="item" id="aluno">
-            <h1>Faltas</h1>
-            <p>Clique abaixo para cadastrar <br> um novo aluno no site</p>
- 
-        </div>
-        <div class="item" id="professor">
-            <h1>Notas</h1>
-            <p>Clique abaixo para cadastrar <br> um novo professor no site</p>
- 
-        </div>
-        <div class="item" id="disciplina">
-            <h1>Horarios</h1>
-            <p>Clique abaixo para cadastrar <br> uma nova disciplina</p>
- 
-        </div>
+        <a href="" class="item_a">
+            <div class="item" id="materiais">
+                <h1>Materiais</h1>
+                <img src="img/materiais.svg" alt="">
+            </div>
+        </a>
+        <a href="" class="item_a">
+            <div class="item" id="faltas">
+                <h1>Faltas</h1>
+                <img src="img/faltas.svg" alt="">
+            </div>
+        </a>
+        <a href="" class="item_a">
+            <div class="item" id="notas">
+                <h1>Notas</h1>
+                <img src="img/notas.svg" alt="">
+            </div>
+        </a>
+        <a href="" class="item_a">
+            <div class="item" id="horarios">
+                <h1>Horarios</h1>
+                <img src="img/horarios.svg" alt="">
+            </div>
+        </a>
     </div>
 </html> 
