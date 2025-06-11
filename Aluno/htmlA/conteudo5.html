@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Histórico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .container {
+      margin-top: 60px;
+      padding: 1rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      min-height: calc(100vh - 60px);
+      box-sizing: border-box;
+    }
+
+    .box {
+      background-color: #FFFDFC;
+      border: none;
+      border-radius: 8px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #307f81;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, opacity 0.6s ease-in-out;
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .box h3 {
+      font-size: 1rem;
+      margin: 0.2rem 0;
+    }
+
+    .box p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="box"><h3>Matemática</h3><p>Faltas: 2</p><p>Média: 7.5</p></div>
+    <div class="box"><h3>Língua Portuguesa</h3><p>Faltas: 1</p><p>Média: 8.0</p></div>
+    <div class="box"><h3>Inglês</h3><p>Faltas: 0</p><p>Média: 9.0</p></div>
+    <div class="box"><h3>Física</h3><p>Faltas: 3</p><p>Média: 6.8</p></div>
+    <div class="box"><h3>Química</h3><p>Faltas: 2</p><p>Média: 7.1</p></div>
+    <div class="box"><h3>Biologia</h3><p>Faltas: 1</p><p>Média: 8.0</p></div>
+    <div class="box"><h3>História</h3><p>Faltas: 1</p><p>Média: 7.3</p></div>
+    <div class="box"><h3>Sociologia</h3><p>Faltas: 0</p><p>Média: 8.5</p></div>
+    <div class="box"><h3>Geografia</h3><p>Faltas: 1</p><p>Média: 8.2</p></div>
+    <div class="box"><h3>Atualidades</h3><p>Faltas: 0</p><p>Média: 9.1</p></div>
+    <div class="box"><h3>Hist-Arte</h3><p>Faltas: 1</p><p>Média: 7.8</p></div>
+    <div class="box"><h3>Redação</h3><p>Faltas: 2</p><p>Média: 8.4</p></div>
+    <div class="box"><h3>Ed. Física</h3><p>Faltas: 0</p><p>Média: 10.0</p></div>
+    <div class="box"><h3>Literatura</h3><p>Faltas: 1</p><p>Média: 7.7</p></div>
+    <div class="box"><h3>Pens. Comp</h3><p>Faltas: 0</p><p>Média: 9.3</p></div>
+  </div>
+
+</body>
+
+</html>

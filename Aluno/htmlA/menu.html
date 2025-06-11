@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffc544;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Container que agrupa logo e menu à esquerda */
+    .left-group {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      /* espaço entre logo e menu */
+    }
+
+    .logo img {
+      height: 40px;
+      transition: height 0.3s ease;
+    }
+
+    .logo a {
+      display: inline-block;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .navbar ul li a,
+    .logout-button {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+      background-color: transparent;
+      /* remove o fundo */
+    }
+
+    .logout-button:hover {
+      background-color: #FFD984;
+      /* mantém o efeito apenas no botão de sair */
+    }
+
+    /* Botão sair no canto direito */
+    .logout-button {
+      background-color: transparent;
+      border: none;
+    }
+
+    .navbar.shrink {
+      padding: 0.8rem 2rem;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.shrink .logo img {
+      height: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="left-group">
+      <div class="logo">
+        <a href="../phpA/pagina1.php">
+          <img src="../../img/logo.webp" alt="Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="../phpA/pagina2.php">Materiais</a></li>
+        <li><a href="../phpA/pagina3.php">Notas</a></li>
+        <li><a href="../phpA/pagina4.php">Faltas</a></li>
+        <li><a href="../phpA/pagina5.php">Histórico</a></li>
+      </ul>
+    </div>
+    <button class="logout-button" onclick="window.location.href='logout.php'">Sair</button>
+  </nav>
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
