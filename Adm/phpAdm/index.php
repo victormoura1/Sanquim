@@ -25,19 +25,19 @@ session_start();
     
   </head>
   <body>
+        <?php
+        include 'masterAdm.php';
+        include 'conexao2.php';
+        ?>
       <div class="container mt-4">
         <?php
-        if (file_exists('mensagem.php')) {
-            include('mensagem.php');
-        }
-        include 'masterAdm.php'
+        include('mensagem.php');
         ?>
         <div class="row">
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
                 <h4>Lista de Usúarios
-                <!-- A classe do botão foi alterada aqui -->
                 <a href="usuario-create.php" class="btn btn-custom float-end">Adicionar usúario</a>
                 </h4>
               </div>
@@ -48,24 +48,38 @@ session_start();
                       <th>ID</th>
                       <th>Nome</th>
                       <th>Nivel</th>
-                      <th>Senha</th>
+                      <th>Status</th>
                       <th>Ações</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <?php
+                    $sql = 'SELECT * FROM usuarios';
+                    $usuarios = mysqli_query($conexao, $sql);
+                    if(mysqli_num_rows($usuarios)>0){
+                      foreach($usuarios as $usuario){
+                    ?>
                     <tr>
-                      <td>1</td>
-                      <td>teste</td>
-                      <td>Aluno</td>
-                      <td>12345</td>
+                      <td><?=$usuario['id']?></td>
+                      <td><?=$usuario['usuario']?></td>
+                      <td><?=$usuario['nivel']?></td>
+                      <td><?=$usuario['status']?></td>
                       <td>
-                        <a href="" class="btn btn-secondary btn-sm">Visualizar</a>
-                        <a href="" class="btn btn-custom btn-sm">Editar</a>
-                        <form action="" method="post" class="d-inline">
-                          <button type="submit" name="delete-usuario" value="1" class="btn btn-danger btn-sm">Excluir</button>
+                        <a href="usuario-view.php?id=<?=$usuario['id']?>" class="btn btn-secondary btn-sm">Visualizar</a>
+                        <a href="usuario-edit.php?id=<?=$usuario['id']?>" class="btn btn-custom btn-sm">Editar</a>
+                        <form action="acoes.php" method="post" class="d-inline">
+                          <button onclick="return confirm('Tem certeza que deseja excluir')"
+                          type="submit" name="delete_usuario" value="<?=$usuario['id']?>" class="btn btn-danger btn-sm">Excluir</button>
                         </form>
                       </td>
                     </tr>
+                    <?php
+                    }
+                  }
+                  else {
+                    echo '<h5>Nenhum usuario encontrado</h5>';
+                  }
+                    ?>
                   </tbody>
                 </table>
               </div>
