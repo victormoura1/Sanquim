@@ -52,7 +52,7 @@ img {
     height: 142px;
 }
 
-#entrar {
+#confirmar {
     background-color: #379091;
     width: 300px;
     color: white;
@@ -65,7 +65,7 @@ img {
     transition: background-color 0.5s;
 }
 
-#entrar:hover {
+#confirmar:hover {
     background-color: #307f81;
 }
 
@@ -76,4 +76,36 @@ a {
 a:hover {
     color: #307f81;
 }
+.codigo-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 
+  .codigo-input {
+    width: 25px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .codigo-input:focus {
+    border-color: #307f81;
+    box-shadow: 0 0 5px #378b8d;
+  }
+
+  /* Remove as setas de incremento/decremento em navegadores baseados em WebKit */
+  .codigo-input::-webkit-outer-spin-button,
+  .codigo-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Remove as setas de incremento/decremento no Firefox */
+  .codigo-input[type=number] {
+    -moz-apparance: textfield;
+  }

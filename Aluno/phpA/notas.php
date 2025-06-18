@@ -6,11 +6,12 @@
     <title>Pagina 1</title>
     <style>
         .notas-container {
-            display: flex; /* Ativa o modo flexbox, essencial para centralização */
-            justify-content: center; /* Centraliza na vertical */
-            align-items: center;     /* Centraliza na horizontal */
-            padding: 40px 20px;      /* Espaçamento interno */
-            min-height: 65vh;        /* Altura mínima para ocupar a maior parte da tela */
+
+            display: flex; /* Ativa o modo flexbox */
+            justify-content: center; /* Centraliza na horizontal (esquerda/direita) */
+            align-items: flex-start;  /* Alinha os itens ao topo do contêiner */
+            padding: 40px 20px;       /* Espaçamento interno */
+            min-height: 65vh;         /* Altura mínima para ocupar a maior parte da tela */
             box-sizing: border-box;
         }
 
@@ -53,8 +54,7 @@
         .btn-voltar {
             display: inline-block;
             /* Define a margem para posicionar o botão */
-            margin: 100px 0 0 2.5rem; /* 2rem no topo, 0 na direita, 0 embaixo, 2.5rem na esquerda */
-            
+            margin: 2rem 0 0 2.5rem; /* Margem superior reduzida para 2rem */
             padding: 10px 20px;
             background-color: #307f81;
             color: #ffffff;
@@ -74,134 +74,134 @@
 </head>
 <body>
     <?php
-$dados_das_materias = [
-    'matematica' => [
-        'titulo'    => 'Matemática',
-        'professor' => 'João',
-        'nota1'     => 8.5,
-        'nota2'     => 9.0
-    ],
-    'lingua-portuguesa' => [
-        'titulo'    => 'Língua Portuguesa',
-        'professor' => 'João',
-        'nota1'     => 7.5,
-        'nota2'     => 8.0
-    ],
-    'sociologia' => [
-        'titulo'    => 'Sociologia',
-        'professor' => 'João',
-        'nota1'     => 9.5,
-        'nota2'     => 9.0
-    ],
-    'pens-comp' => [
-        'titulo'    => 'Pensamento Computacional',
-        'professor' => 'João',
-        'nota1'     => 10.0,
-        'nota2'     => 10.0
-    ],
-    'ingles' => [
-        'titulo'    => 'Inglês',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'quimica' => [
-        'titulo'    => 'Química',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'biologia' => [
-        'titulo'    => 'Biologia',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'historia' => [
-        'titulo'    => 'História',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'geografia' => [
-        'titulo'    => 'Geografia',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'fisica' => [
-        'titulo'    => 'Física',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'atualidades' => [
-        'titulo'    => 'Atualidades',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'hist-arte' => [
-        'titulo'    => 'História da Arte',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'redacao' => [
-        'titulo'    => 'Redação',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'ed-fisica' => [
-        'titulo'    => 'Educação-Física',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ],
-    'literatura' => [
-        'titulo'    => 'Literatura',
-        'professor' => 'João',
-        'nota1'     => 6.0,
-        'nota2'     => 7.5
-    ]
 
-];
+    $dados_das_materias = [
+        'matematica' => [
+            'titulo'    => 'Matemática',
+            'professor' => 'João',
+            'nota1'     => 8.5,
+            'nota2'     => 9.0
+        ],
+        'lingua-portuguesa' => [
+            'titulo'    => 'Língua Portuguesa',
+            'professor' => 'João',
+            'nota1'     => 7.5,
+            'nota2'     => 8.0
+        ],
+        'sociologia' => [
+            'titulo'    => 'Sociologia',
+            'professor' => 'João',
+            'nota1'     => 9.5,
+            'nota2'     => 9.0
+        ],
+        'pens-comp' => [
+            'titulo'    => 'Pensamento Computacional',
+            'professor' => 'João',
+            'nota1'     => 10.0,
+            'nota2'     => 10.0
+        ],
+        'ingles' => [
+            'titulo'    => 'Inglês',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'quimica' => [
+            'titulo'    => 'Química',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'biologia' => [
+            'titulo'    => 'Biologia',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'historia' => [
+            'titulo'    => 'História',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'geografia' => [
+            'titulo'    => 'Geografia',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'fisica' => [
+            'titulo'    => 'Física',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'atualidades' => [
+            'titulo'    => 'Atualidades',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'hist-arte' => [
+            'titulo'    => 'História da Arte',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'redacao' => [
+            'titulo'    => 'Redação',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'ed-fisica' => [
+            'titulo'    => 'Educação-Física',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ],
+        'literatura' => [
+            'titulo'    => 'Literatura',
+            'professor' => 'João',
+            'nota1'     => 6.0,
+            'nota2'     => 7.5
+        ]
+    ];
 
+    ob_start();
+    if (isset($_GET['materia'])) {
+        
+        $materia_selecionada = $_GET['materia'];
 
-ob_start();
-if (isset($_GET['materia'])) {
-    
-    $materia_selecionada = $_GET['materia'];
+        if (array_key_exists($materia_selecionada, $dados_das_materias)) {
+            $materia_info = $dados_das_materias[$materia_selecionada];
 
-    if (array_key_exists($materia_selecionada, $dados_das_materias)) {
-        $materia_info = $dados_das_materias[$materia_selecionada];
+            echo '<a href="pagina3.php" class="btn-voltar">< Voltar </a>';
 
-        echo '<a href="pagina3.php" class="btn-voltar">< Voltar </a>';
+            echo '<div class="notas-container">';
+            echo '  <div class="notas-card">';
+            echo "    <h1>" . htmlspecialchars($materia_info['titulo']) . "</h1>";
+            echo '    <div class="notas-info">';
+            echo "      <p><strong>Professor:</strong> " . htmlspecialchars($materia_info['professor']) . "</p>";
+            echo "      <p><strong>Nota 1:</strong> " . htmlspecialchars(number_format($materia_info['nota1'], 1, ',')) . "</p>";
+            echo "      <p><strong>Nota 2:</strong> " . htmlspecialchars(number_format($materia_info['nota2'], 1, ',')) . "</p>";
+            echo '    </div>';
+            echo '  </div>';
+            echo '</div>';
 
-        echo '<div class="notas-container">';
-        echo '  <div class="notas-card">';
-        echo "    <h1>" . htmlspecialchars($materia_info['titulo']) . "</h1>";
-        echo '    <div class="notas-info">';
-        echo "      <p><strong>Professor:</strong> " . htmlspecialchars($materia_info['professor']) . "</p>";
-        echo "      <p><strong>Nota 1:</strong> " . htmlspecialchars(number_format($materia_info['nota1'], 1, ',')) . "</p>";
-        echo "      <p><strong>Nota 2:</strong> " . htmlspecialchars(number_format($materia_info['nota2'], 1, ',')) . "</p>";
-        echo '    </div>';
-        echo '  </div>';
-        echo '</div>';
+        } else {
+            echo "<h1>Matéria não encontrada!</h1>";
+            echo "<p>A matéria que você tentou acessar não existe.</p>";
+        }
 
     } else {
-        echo "<h1>Matéria não encontrada!</h1>";
-        echo "<p>A matéria que você tentou acessar não existe.</p>";
+        echo "<h1>Nenhuma matéria selecionada!</h1>";
+        echo "<p>Por favor, volte à página anterior e escolha uma matéria para ver os detalhes.</p>";
     }
 
-} else {
-    echo "<h1>Nenhuma matéria selecionada!</h1>";
-    echo "<p>Por favor, volte à página anterior e escolha uma matéria para ver os detalhes.</p>";
-}
+    $page_content = ob_get_clean();
+    include 'masterA.php';
+    ?>
 
-$page_content = ob_get_clean();
-include 'masterA.php';
-?>
 </body>
 </html>

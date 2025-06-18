@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo/senha.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form action="../entrar.php" method="post">
+        <div class="container">
+            <div class="login">
+                <img src="../img/logo.webp">
+
+                    <div class="codigo-container">
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                        <input type="tel" maxlength="1" class="codigo-input" placeholder="-" required>
+                    </div>
+                <input type="password" name="nova-senha" placeholder="Nova Senha*">
+                <input type="password" name="nova-senha" placeholder="Confirme a Senha*">
+                <p>Não recebeu o código? <a href="">Enviar novamente</a></p>
+                <button type="submit" id="confirmar">Confirmar</button>
+            </div>
+        </div>
+    </form>
+    <script src="senha.js"></script>
+</body>
+
+</html>

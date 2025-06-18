@@ -10,12 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <style>
         .container1 {
-            position: relative; /* contexto para o fundo curvo */
-            margin-top: 90px;
+            position: relative;
             padding: 1rem 2rem;
             display: grid;
             gap: 1rem;
-            min-height: 150vh; /* garante que container cubra a altura da página */
+            min-height: 150vh;
             box-sizing: border-box;
             font-family: 'Poppins', Arial, sans-serif;
         }
@@ -34,7 +33,7 @@
 
         .comecar {
             background-color: #379091;
-            width: 300px;
+            width: 200px;
             color: white;
             border: none;
             border-radius: 8px;
@@ -44,6 +43,10 @@
             font-weight: 600;
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
             transition: background-color 0.5s;
+            align-items: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
         }
 
         .comecar:hover {
@@ -118,18 +121,46 @@
         .fundo-curvo {
             background-color: #F0F0EA;
             position: absolute;
-            top: 350px; /* começa na metade da .lousa */
+            top: 350px;
+            /* começa na metade da .lousa */
             left: 0;
             width: 100%;
-            height: 180vh; /* estende até além do fim da página */
+            height: 180vh;
+            /* estende até além do fim da página */
             background-color: #f6f6f0;
             clip-path: ellipse(100% 100% at 90% 80%);
             border-radius: 30%;
             z-index: -1;
         }
-        .notas img{
+
+        .notas img {
             width: 100px;
             height: 100px;
+        }
+
+        .mensagem {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* fundo escuro translúcido */
+            z-index: 2000;
+            /* acima da navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mensagem h1 {
+            background-color: #fff;
+            color: #333;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -139,7 +170,7 @@
         <div class="pt1">
             <h1>Não deixe para <span class="azul">Estudar</span> depois</h1>
             <p>Acompanhe o conteúdo das suas matérias por aqui.</p>
-            <button class="comecar">Começar</button>
+            <a href="../phpA/pagina2.php" class="comecar">Começar</a>
             <img src="../../img/lousa.png" alt="" class="lousa" />
             <div class="titulo2">
                 <h1>Controle sua <span class="azul">presença</span>,</h1>
@@ -160,7 +191,7 @@
                 <p>tabela com as notas de todas as</p>
                 <p>suas disciplinas.</p>
             </div>
-            <img src="" alt="">
+
         </div>
         <div class="sub2">
             <div class="sub1">
@@ -177,7 +208,7 @@
                     <p>sua presença atual.</p>
                 </div>
                 <div class="notas">
-                    <img src="../../img/controle_notas.png" alt="">
+
                 </div>
             </div>
         </div>
