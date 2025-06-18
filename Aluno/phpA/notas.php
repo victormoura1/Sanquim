@@ -6,6 +6,7 @@
     <title>Pagina 1</title>
     <style>
         .notas-container {
+
             display: flex; /* Ativa o modo flexbox */
             justify-content: center; /* Centraliza na horizontal (esquerda/direita) */
             align-items: flex-start;  /* Alinha os itens ao topo do contêiner */
@@ -73,6 +74,7 @@
 </head>
 <body>
     <?php
+
     $dados_das_materias = [
         'matematica' => [
             'titulo'    => 'Matemática',
@@ -200,5 +202,6 @@
     $page_content = ob_get_clean();
     include 'masterA.php';
     ?>
+
 </body>
 </html>
