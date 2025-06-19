@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materiais</title>
+    <title>Pagina 1</title>
 </head>
 <body>
-    <div class="container">
-        <table>
-            <tr>
-                
-            </tr>
-        </table>
-    </div>
+    <?php
+        $page_content = '../htmlP/conteudo5.html';
+        include'masterP.php';
+    ?>
 </body>
 </html>
