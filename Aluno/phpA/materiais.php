@@ -136,7 +136,7 @@
         
         $materia_selecionada = $dados_das_materias[$_GET['materia']];
         
-        echo '<a href="materiais.php" class="btn-voltar">‹ Voltar</a>';
+        echo '<a href="../phpA/pagina2.php" class="btn-voltar">‹ Voltar</a>';
         
         echo '<div class="notas-container">';
         echo '  <div class="notas-card">';
