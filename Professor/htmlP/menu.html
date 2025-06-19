@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Site</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <style>
+  /* Define a fonte padrão para o corpo e um espaço no topo para a barra fixa */
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-top: 80px; /* Ajuste essa altura se necessário */
+  }
+
+  /* Estilização da nossa barra de navegação customizada */
+  .navbar-custom {
+    background-color: #ffc544; /* Sua cor amarela */
+    padding: 1rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    transition: padding 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Links da navegação e botão Sair */
+  .navbar-custom .nav-link,
+  .navbar-custom .logout-button {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  /* Efeito de hover para os links do menu */
+  .navbar-custom .nav-link:hover {
+    text-decoration: underline;
+    color: white; /* Garante que a cor do texto não mude no hover */
+  }
+
+  /* Estilo e hover para o botão de sair */
+  .navbar-custom .logout-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-custom .logout-button:hover {
+    background-color: #FFD984;
+  }
+
+  /* Estilo da logo */
+  .navbar-custom .logo img {
+    height: 40px;
+    transition: height 0.3s ease;
+  }
+  
+  /* Animação de "encolher" ao rolar a página */
+  .navbar-custom.shrink {
+    padding: 0.8rem 2rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-custom.shrink .logo img {
+    height: 32px;
+  }
+
+  /* Ajuste no ícone do menu "sanduíche" para ficar mais visível no fundo amarelo */
+  .navbar-custom .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+</style>
+</head>
+
+<body> <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="../phpP/pagina1.php">
+      <img src="../../img/logo.webp" alt="Logo" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="../phpP/pagina2.php">Notas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../phpP/pagina4.php">Faltas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../phpP/pagina5.php">Histórico</a>
+        </li>
+      </ul>
+      <button class="logout-button" onclick="mostrarMensagem()">Sair</button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Previne que o script execute mais de uma vez caso o include seja chamado em loop
+  if (typeof navbarShrinkListener === 'undefined') {
+    var navbarShrinkListener = true;
+
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar-custom'); // Use uma classe mais específica
+      if (navbar) {
+        if (window.scrollY > 10) {
+          navbar.classList.add('shrink');
+        } else {
+          navbar.classList.remove('shrink');
+        }
+      }
+    });
+  }
+
+  // A função do botão Sair precisa estar acessível globalmente
+  function mostrarMensagem() {
+    alert("Você clicou em Sair!");
+    // Futuramente, você pode redirecionar o usuário:
+    // window.location.href = 'logout.php'; 
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
