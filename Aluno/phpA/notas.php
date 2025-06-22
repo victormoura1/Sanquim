@@ -51,12 +51,12 @@
             color: #307f81; /* Usa a cor principal do seu site */
         }
 
-        .btn-voltar {
+      .btn-voltar {
             display: inline-block;
             /* Define a margem para posicionar o botão */
             margin: 2rem 0 0 2.5rem; /* Margem superior reduzida para 2rem */
             padding: 10px 20px;
-            background-color: #307f81;
+            background-color: #379091;
             color: #ffffff;
             font-size: 0.9rem; /* Um pouco menor para não ser tão dominante */
             font-weight: bold;
@@ -66,7 +66,7 @@
         }
 
         .btn-voltar:hover {
-            background-color: #2a6d6f;
+            background-color: #307f81;
             transform: scale(1.05); /* Efeito de zoom sutil */
             cursor: pointer;
         }
