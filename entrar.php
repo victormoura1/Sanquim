@@ -46,7 +46,7 @@ if (mysqli_num_rows($resultado) > 0) {
                 header("location: Professor/pagina_professor.php");
                 break;
             case 'administrador':
-                header("location: Adm/phpAdm/index.php");
+                header("location: Adm/phpAdm/cadastro-matricula.php");
                 break;
             default:
                 // Nível desconhecido, armazena a mensagem na sessão

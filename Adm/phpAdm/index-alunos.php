@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alunos</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       .btn-custom {
         background-color: #379091;
@@ -26,7 +26,7 @@ session_start();
             /* Define a margem para posicionar o botão */
             margin: 2rem 0 0 2.5rem; /* Margem superior reduzida para 2rem */
             padding: 10px 20px;
-            background-color: #307f81;
+            background-color: #379091;
             color: #ffffff;
             font-size: 0.9rem; /* Um pouco menor para não ser tão dominante */
             font-weight: bold;
@@ -36,7 +36,7 @@ session_start();
         }
 
         .btn-voltar:hover {
-            background-color: #2a6d6f;
+            background-color: #307f81;
             transform: scale(1.05); /* Efeito de zoom sutil */
             cursor: pointer;
         }
@@ -84,8 +84,7 @@ session_start();
                       <td><?=$aluno['id']?></td>
                       <td><?=$aluno['nome']?></td>
                       <td><?=$aluno['ra']?></td>
-                      <td><?=$aluno['date']?></td>
-                      <td><?=$aluno['status']?></td>
+                      <td><?= date('d/m/Y', strtotime($aluno['data_nascimento'])) ?></td> <td><?=$aluno['status']?></td>
                       <td>
                         <a href="aluno-view.php?id=<?=$aluno['id']?>" class="btn btn-secondary btn-sm">Visualizar</a>
                         <a href="aluno-edit.php?id=<?=$aluno['id']?>" class="btn btn-custom btn-sm">Editar</a>
@@ -96,11 +95,11 @@ session_start();
                       </td>
                     </tr>
                     <?php
+                      }
                     }
-                  }
-                  else {
-                    echo '<h5>Nenhum aluno encontrada</h5>';
-                  }
+                    else {
+                      echo '<h5>Nenhum aluno encontrada</h5>';
+                    }
                     ?>
                   </tbody>
                 </table>
@@ -109,6 +108,6 @@ session_start();
           </div>
         </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
