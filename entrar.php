@@ -43,7 +43,7 @@ if (mysqli_num_rows($resultado) > 0) {
                 header("location: Aluno/phpA/pagina1.php");
                 break;
             case 'professor':
-                header("location: Professor/pagina_professor.php");
+                header("location: Professor/phpP/pagina1.php");
                 break;
             case 'administrador':
                 header("location: Adm/phpAdm/cadastro-matricula.php");
