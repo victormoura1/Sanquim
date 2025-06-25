@@ -2,8 +2,8 @@
     "matematica": {
         "titulo": "Matemática",
         "professor": "João",
-        "nota1": 10,
-        "nota2": 6
+        "nota1": 5,
+        "nota2": 3
     },
     "lingua-portuguesa": {
         "titulo": "Língua Portuguesa",
