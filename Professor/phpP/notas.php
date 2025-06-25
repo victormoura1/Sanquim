@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 15px;
             border: none;
             border-radius: 8px;
-            background-color: #28a745;
+            background-color: #307f81;
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             transition: background-color 0.3s;
         }
         .btn-salvar:hover {
-            background-color: #218838;
+            background-color:#2a6d6f;
         }
         .mensagem {
             padding: 10px;

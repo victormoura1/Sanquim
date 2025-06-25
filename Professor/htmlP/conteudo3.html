@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Faltas</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .conteudo{
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    canvas {
+      max-width: 300px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .info {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+<div class="conteudo">
+  <h2>Presença do Aluno</h2>
+  <div class="info">Faltas: <span id="faltas">3</span> / 200</div>
+  <canvas id="graficoPresenca"></canvas>
+</div>
+  <script>
+    const totalFaltas = 200;
+    const faltas = 30;
+    const presencas = totalFaltas - faltas;
+
+    document.getElementById("faltas").textContent = faltas;
+
+    const ctx = document.getElementById('graficoPresenca').getContext('2d');
+    const graficoPresenca = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Presenças', 'Faltas'],
+        datasets: [{
+          data: [presencas, faltas],
+          backgroundColor: ['#307f81', '#f44336'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        cutout: '60%',
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        $page_content = '../htmlP/conteudo4.html';
+        $page_content = '../htmlP/conteudo3.html';
         include'masterP.php';
     ?>
 </body>
