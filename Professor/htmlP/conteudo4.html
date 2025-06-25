@@ -1,66 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Faltas</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Histórico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    .conteudo{
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f8f8f8;
     }
 
-    canvas {
-      max-width: 300px;
-      margin: auto;
+    .container {
+      padding: 1rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      min-height: calc(100vh - 60px);
+      box-sizing: border-box;
     }
 
-    h2 {
-      margin-bottom: 10px;
+    .box {
+      background-color: #FFFDFC;
+      border: none;
+      border-radius: 8px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #307f81;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, opacity 0.6s ease-in-out;
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
     }
 
-    .info {
-      margin-bottom: 20px;
-      font-size: 18px;
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .box h3 {
+      font-size: 1rem;
+      margin: 0.2rem 0;
+    }
+
+    .box p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
+
 <body>
-<div class="conteudo">
-  <h2>Presença do Aluno</h2>
-  <div class="info">Faltas: <span id="faltas">3</span> / 200</div>
-  <canvas id="graficoPresenca"></canvas>
-</div>
-  <script>
-    const totalFaltas = 200;
-    const faltas = 30;
-    const presencas = totalFaltas - faltas;
 
-    document.getElementById("faltas").textContent = faltas;
-
-    const ctx = document.getElementById('graficoPresenca').getContext('2d');
-    const graficoPresenca = new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Presenças', 'Faltas'],
-        datasets: [{
-          data: [presencas, faltas],
-          backgroundColor: ['#307f81', '#f44336'],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        cutout: '60%',
-        plugins: {
-          legend: {
-            display: true,
-            position: 'bottom'
-          }
-        }
-      }
-    });
-  </script>
+  <div class="container">
+    <div class="box"><h3>Matemática</h3><p>Faltas: 2</p><p>Média: 7.5</p></div>
+    <div class="box"><h3>Língua Portuguesa</h3><p>Faltas: 1</p><p>Média: 8.0</p></div>
+    <div class="box"><h3>Inglês</h3><p>Faltas: 0</p><p>Média: 9.0</p></div>
+    <div class="box"><h3>Física</h3><p>Faltas: 3</p><p>Média: 6.8</p></div>
+    <div class="box"><h3>Química</h3><p>Faltas: 2</p><p>Média: 7.1</p></div>
+    <div class="box"><h3>Biologia</h3><p>Faltas: 1</p><p>Média: 8.0</p></div>
+    <div class="box"><h3>História</h3><p>Faltas: 1</p><p>Média: 7.3</p></div>
+    <div class="box"><h3>Sociologia</h3><p>Faltas: 0</p><p>Média: 8.5</p></div>
+    <div class="box"><h3>Geografia</h3><p>Faltas: 1</p><p>Média: 8.2</p></div>
+    <div class="box"><h3>Atualidades</h3><p>Faltas: 0</p><p>Média: 9.1</p></div>
+    <div class="box"><h3>Hist-Arte</h3><p>Faltas: 1</p><p>Média: 7.8</p></div>
+    <div class="box"><h3>Redação</h3><p>Faltas: 2</p><p>Média: 8.4</p></div>
+    <div class="box"><h3>Ed. Física</h3><p>Faltas: 0</p><p>Média: 10.0</p></div>
+    <div class="box"><h3>Literatura</h3><p>Faltas: 1</p><p>Média: 7.7</p></div>
+    <div class="box"><h3>Pens. Comp</h3><p>Faltas: 0</p><p>Média: 9.3</p></div>
+  </div>
 
 </body>
+
 </html>

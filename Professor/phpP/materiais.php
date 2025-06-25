@@ -81,8 +81,8 @@ if (isset($_GET['upload']) && $_GET['upload'] === 'sucesso') {
         .btn-voltar:hover { background-color: #2a6d6f; transform: scale(1.05); cursor: pointer; }
         .upload-form { background-color: #f1f1f1; padding: 20px; border-radius: 8px; margin-top: 1.5rem; border: 1px dashed #ccc; }
         .upload-form label { font-weight: bold; display: block; margin-bottom: 10px; }
-        .btn-upload { padding: 10px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
-        .btn-upload:hover { background-color: #218838; }
+        .btn-upload { padding: 10px 15px; background-color: #307f81; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s; }
+        .btn-upload:hover { background-color:#2a6d6f; }   
         .mensagem { padding: 10px; margin-bottom: 1rem; border-radius: 5px; text-align: center; }
         .mensagem.sucesso { background-color: #d4edda; color: #155724; }
         .mensagem.erro { background-color: #f8d7da; color: #721c24; }

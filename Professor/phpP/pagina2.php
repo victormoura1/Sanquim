@@ -51,7 +51,7 @@
 </head>
 <body>
     <?php
-        $page_content = '../htmlP/conteudo3.php';
+        $page_content = '../htmlP/conteudo2.php';
         include 'masterP.php';
     ?>
 </body>
