@@ -8,7 +8,7 @@
         $materias = json_decode($dados_json, true);
     }
 ?>
-
+<div class="h1"><h1>Matérias</h1></div>
 <div class="container">
     <?php
     if (!empty($materias)) {

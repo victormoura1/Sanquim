@@ -102,7 +102,7 @@ if (isset($_GET['materia']) && array_key_exists($_GET['materia'], $dados_das_mat
     $materia_selecionada_key = $_GET['materia'];
     $materia_selecionada = $dados_das_materias[$materia_selecionada_key];
     
-    echo '<a href="materiais.php" class="btn-voltar">‹ Voltar</a>';
+    echo '<a href="pagina1.php" class="btn-voltar">‹ Voltar</a>';
     
     echo '<div class="notas-container">';
     echo '  <div class="notas-card">';

@@ -67,66 +67,66 @@
 <body>
 <?php   
     $dados_das_materias = [
-    'matematica' => [
-        'titulo' => 'Matemática',
-        'pasta'  => '../../materiais_pdf/matematica/'
-    ],
-    'historia' => [
-        'titulo' => 'História',
-        'pasta'  => '../../materiais_pdf/historia/'
-    ],
-    'fisica' => [
-        'titulo' => 'Física',
-        'pasta'  => '../../materiais_pdf/fisica/'
-    ],
-    'geografia' => [
-        'titulo' => 'Geografia',
-        'pasta'  => '../../materiais_pdf/geografia/'
-    ],
-    'lingua-portuguesa' => [
-        'titulo' => 'Lingua Portuguesa',
-        'pasta'  => '../../materiais_pdf/lingua-portuguesa/'
-    ],
-    'redacao' => [
-        'titulo' => 'Redação',
-        'pasta'  => '../../materiais_pdf/redacao/'
-    ],
-    'ingles' => [
-        'titulo' => 'Inglês',
-        'pasta'  => '../../materiais_pdf/ingles/'
-    ],
-    'literatura' => [
-        'titulo' => 'Literatura',
-        'pasta'  => '../../materiais_pdf/literatura/'
-    ],
-    'quimica' => [
-        'titulo' => 'Química',
-        'pasta'  => '../../materiais_pdf/quimica/'
-    ],
-    'hist-arte' => [
-        'titulo' => 'História da Arte',
-        'pasta'  => '../../materiais_pdf/hist-arte/'
-    ],
-    'pens-comp' => [
-        'titulo' => 'Pens-Computacional',
-        'pasta'  => '../../materiais_pdf/pens-comp/'
-    ],
-    'biologia' => [
-        'titulo' => 'Biologia',
-        'pasta'  => '../../materiais_pdf/biologia/'
-    ],
-    'sociologia' => [
-        'titulo' => 'Sociologia',
-        'pasta'  => '../../materiais_pdf/sociologia/'
-    ],
-    'atualidades' => [
-        'titulo' => 'Atualidades',
-        'pasta'  => '../../materiais_pdf/atualidades/'
-    ],
-    'ed-fisica' => [
-        'titulo' => 'Educação-Física',
-        'pasta'  => '../../materiais_pdf/ed-fisica/'
-    ],
+        'matematica' => [
+            'titulo' => 'Matemática',
+            'pasta'  => '../../materiais_pdf/matematica/'
+        ],
+        'historia' => [
+            'titulo' => 'História',
+            'pasta'  => '../../materiais_pdf/historia/'
+        ],
+        'fisica' => [
+            'titulo' => 'Física',
+            'pasta'  => '../../materiais_pdf/fisica/'
+        ],
+        'geografia' => [
+            'titulo' => 'Geografia',
+            'pasta'  => '../../materiais_pdf/geografia/'
+        ],
+        'lingua-portuguesa' => [
+            'titulo' => 'Lingua Portuguesa',
+            'pasta'  => '../../materiais_pdf/lingua-portuguesa/'
+        ],
+        'redacao' => [
+            'titulo' => 'Redação',
+            'pasta'  => '../../materiais_pdf/redacao/'
+        ],
+        'ingles' => [
+            'titulo' => 'Inglês',
+            'pasta'  => '../../materiais_pdf/ingles/'
+        ],
+        'literatura' => [
+            'titulo' => 'Literatura',
+            'pasta'  => '../../materiais_pdf/literatura/'
+        ],
+        'quimica' => [
+            'titulo' => 'Química',
+            'pasta'  => '../../materiais_pdf/quimica/'
+        ],
+        'hist-arte' => [
+            'titulo' => 'História da Arte',
+            'pasta'  => '../../materiais_pdf/hist-arte/'
+        ],
+        'pens-comp' => [
+            'titulo' => 'Pens-Computacional',
+            'pasta'  => '../../materiais_pdf/pens-comp/'
+        ],
+        'biologia' => [
+            'titulo' => 'Biologia',
+            'pasta'  => '../../materiais_pdf/biologia/'
+        ],
+        'sociologia' => [
+            'titulo' => 'Sociologia',
+            'pasta'  => '../../materiais_pdf/sociologia/'
+        ],
+        'atualidades' => [
+            'titulo' => 'Atualidades',
+            'pasta'  => '../../materiais_pdf/atualidades/'
+        ],
+        'ed-fisica' => [
+            'titulo' => 'Educação-Física',
+            'pasta'  => '../../materiais_pdf/ed-fisica/'
+        ],
     
     ];
 

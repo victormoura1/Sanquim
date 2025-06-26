@@ -9,6 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
+        .h1 {
+            color: #307f81 !important;
+            background-color: #FFFDFC;
+            border: none;
+            border-radius: 8px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            user-select: none;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; 
+        }
         .container {
             padding: 1rem 2rem;
             display: grid;

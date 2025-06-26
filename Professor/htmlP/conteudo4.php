@@ -1,5 +1,5 @@
 <?php
-    $caminho_json = '../../Professor/phpP/notas.json';
+    $caminho_json = '../phpP/notas.json';
 
     // 2. Ler o arquivo de dados.
     $materias = [];
@@ -14,10 +14,10 @@
     <?php
     if (!empty($materias)) {
         foreach ($materias as $chave => $dados) {
-            echo '<a href="../phpA/notas.php?materia=' . htmlspecialchars($chave) . '">';
+            echo '<a href="../phpP/hist.php?materia=' . htmlspecialchars($chave) . '">';
             echo '  <div class="box">';
             echo '    <h2>' . htmlspecialchars($dados['titulo']) . '</h2>';
-            echo '    <p>Visualizar notas</p>';
+            echo '    <p>Visualizar Histórico</p>';
             echo '  </div>';
             echo '</a>';
         }
