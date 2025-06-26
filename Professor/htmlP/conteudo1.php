@@ -1,5 +1,5 @@
 <?php
-    $caminho_json = '../../Professor/phpP/notas.json';
+    $caminho_json = '../phpP/notas.json';
 
     // 2. Ler o arquivo de dados.
     $materias = [];
@@ -8,16 +8,14 @@
         $materias = json_decode($dados_json, true);
     }
 ?>
-
 <div class="h1"><h1>Matérias</h1></div>
 <div class="container">
     <?php
     if (!empty($materias)) {
         foreach ($materias as $chave => $dados) {
-            echo '<a href="../phpA/notas.php?materia=' . htmlspecialchars($chave) . '">';
+            echo '<a href="../phpP/materiais.php?materia=' . htmlspecialchars($chave) . '">';
             echo '  <div class="box">';
             echo '    <h2>' . htmlspecialchars($dados['titulo']) . '</h2>';
-            echo '    <p>Visualizar notas</p>';
             echo '  </div>';
             echo '</a>';
         }

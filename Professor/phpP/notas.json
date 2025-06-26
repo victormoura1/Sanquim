@@ -3,90 +3,122 @@
         "titulo": "Matemática",
         "professor": "João",
         "nota1": 4,
-        "nota2": 9
+        "nota2": 9,
+        "taulas": 7,
+        "faltas": 2
     },
     "lingua-portuguesa": {
         "titulo": "Língua Portuguesa",
         "professor": "João",
         "nota1": 8,
-        "nota2": 3
+        "nota2": 3,
+        "presenca": 0,
+        "faltas": 1,
+        "taulas": 2
     },
     "sociologia": {
         "titulo": "Sociologia",
         "professor": "João",
         "nota1": 9.5,
-        "nota2": 9
+        "nota2": 9,
+        "presenca": 0,
+        "faltas": 0
     },
     "pens-comp": {
         "titulo": "Pensamento Computacional",
         "professor": "João",
         "nota1": 10,
-        "nota2": 10
+        "nota2": 10,
+        "presenca": 0,
+        "faltas": 0
     },
     "ingles": {
         "titulo": "Inglês",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "quimica": {
         "titulo": "Química",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "biologia": {
         "titulo": "Biologia",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "historia": {
         "titulo": "História",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 1,
+        "taulas": 5
     },
     "geografia": {
         "titulo": "Geografia",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "fisica": {
         "titulo": "Física",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "atualidades": {
         "titulo": "Atualidades",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "hist-arte": {
         "titulo": "História da Arte",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "redacao": {
         "titulo": "Redação",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "ed-fisica": {
         "titulo": "Educação-Física",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     },
     "literatura": {
         "titulo": "Literatura",
         "professor": "João",
         "nota1": 6,
-        "nota2": 7.5
+        "nota2": 7.5,
+        "presenca": 0,
+        "faltas": 0
     }
 }
