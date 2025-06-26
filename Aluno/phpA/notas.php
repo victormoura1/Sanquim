@@ -56,6 +56,11 @@ $dados_das_materias = lerDados();
             $nota1 = $materia_info['nota1'] ?? 0;
             $nota2 = $materia_info['nota2'] ?? 0;
             $media = ($nota1 + $nota2) / 2;
+            $faltas = $materia_info['faltas'] ?? 0;
+            $taulas = $materia_info['taulas'] ?? 0;
+            $presenca = ($taulas - $faltas);
+            $frequencia = ($taulas > 0) ? (($presenca / $taulas) * 100) : 100;
+            $limfaltas = ($taulas * 0.2);
             
             $status_texto = 'Reprovado';
             $status_classe = 'reprovado';

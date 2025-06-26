@@ -152,15 +152,8 @@
         if (!empty($arquivos_pdf)) {
             
             echo '    <ul class="material-list">';
-            
-            // PASSO 4: LOOP ATRAVÉS DOS ARQUIVOS ENCONTRADOS
             foreach ($arquivos_pdf as $caminho_completo_pdf) {
-                
-                // Pega apenas o nome do arquivo (ex: 'resumo_trigonometria.pdf')
                 $nome_do_arquivo = basename($caminho_completo_pdf);
-                
-                // Bônus: Deixa o nome mais bonito para exibição
-                // Remove a extensão '.pdf' e troca '_' por espaço
                 $nome_bonito = str_replace(['_', '-'], ' ', pathinfo($nome_do_arquivo, PATHINFO_FILENAME));
                 
                 echo '<li class="material-item">';
