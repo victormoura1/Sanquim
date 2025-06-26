@@ -2,9 +2,9 @@
     "matematica": {
         "titulo": "Matemática",
         "professor": "João",
-        "nota1": 4,
-        "nota2": 9,
-        "taulas": 7,
+        "nota1": 10,
+        "nota2": 6,
+        "taulas": 8,
         "faltas": 2
     },
     "lingua-portuguesa": {
