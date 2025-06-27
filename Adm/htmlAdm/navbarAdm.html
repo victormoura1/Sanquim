@@ -120,10 +120,11 @@
     });
   }
 
-  // A função do botão Sair precisa estar acessível globalmente
-  function mostrarMensagem() {
-    alert("Você clicou em Sair!");
-    // Futuramente, você pode redirecionar o usuário:
-    // window.location.href = 'logout.php'; 
+
+function mostrarMensagem() {
+  var confirmacao = confirm("Tem certeza que deseja sair?");
+  if (confirmacao) {
+    window.location.href = "../../Login/login.php";
   }
+}
 </script>

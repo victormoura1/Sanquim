@@ -2,14 +2,14 @@
     "matematica": {
         "titulo": "Matemática",
         "professor": "João",
-        "nota1": 4,
-        "nota2": 9
+        "nota1": 10,
+        "nota2": 2
     },
     "lingua-portuguesa": {
         "titulo": "Língua Portuguesa",
         "professor": "João",
-        "nota1": 8,
-        "nota2": 3
+        "nota1": 10,
+        "nota2": 5
     },
     "sociologia": {
         "titulo": "Sociologia",
