@@ -14,10 +14,10 @@
     <?php
     if (!empty($materias)) {
         foreach ($materias as $chave => $dados) {
-            echo '<a href="../phpA/notas.php?materia=' . htmlspecialchars($chave) . '">';
+            echo '<a href="../phpA/materiais.php?materia=' . htmlspecialchars($chave) . '">';
             echo '  <div class="box">';
             echo '    <h2>' . htmlspecialchars($dados['titulo']) . '</h2>';
-            echo '    <p>Visualizar notas</p>';
+            echo '    <p>Visualizar materiais</p>';
             echo '  </div>';
             echo '</a>';
         }

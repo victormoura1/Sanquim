@@ -1,7 +1,7 @@
 <?php
 // Lógica PHP no topo, antes de qualquer HTML
 ob_start();
-$dataFile ='../../Professor/phpP/notas.json'; 
+$dataFile ='notas.json'; 
 
 // Função para ler os dados do arquivo JSON
 function lerDados() {
@@ -52,6 +52,7 @@ $dados_das_materias = lerDados();
         if (array_key_exists($materia_selecionada, $dados_das_materias)) {
             $materia_info = $dados_das_materias[$materia_selecionada];
 
+            
             // --- MELHORIA: Calcular a média e o status do aluno ---
             $nota1 = $materia_info['nota1'] ?? 0;
             $nota2 = $materia_info['nota2'] ?? 0;
@@ -64,28 +65,25 @@ $dados_das_materias = lerDados();
             
             $status_texto = 'Reprovado';
             $status_classe = 'reprovado';
-            if ($faltas > $limfaltas) {
-                $status_texto = 'Reprovado por Falta';
-                $status_classe = 'reprovado';
-            } elseif ($media >= 6) {
+            if (($media >= 6) and ($faltas < $limfaltas)) {
                 $status_texto = 'Aprovado';
                 $status_classe = 'aprovado';
-            } elseif ($media >= 4) {
+            } elseif (($media >= 4) and ($faltas < $limfaltas)) {
                 $status_texto = 'Em Recuperação';
                 $status_classe = 'recuperacao';
             }
 
-            echo '<a href="pagina3.php" class="btn-voltar">‹ Voltar</a>'; // Lembre-se de apontar para a página correta
+            echo '<a href="pagina4.php" class="btn-voltar">‹ Voltar</a>'; // Lembre-se de apontar para a página correta
 
             echo '<div class="notas-container">';
             echo '  <div class="notas-card">';
             echo "      <h1>" . htmlspecialchars($materia_info['titulo']) . "</h1>";
             echo '      <div class="notas-info">';
             echo "          <p><strong>Aluno:</strong> " . htmlspecialchars($materia_info['professor']) . "</p>";
-            echo "          <p><strong>Nota 1:</strong> " . htmlspecialchars(number_format($nota1, 1, ',')) . "</p>";
-            echo "          <p><strong>Nota 2:</strong> " . htmlspecialchars(number_format($nota2, 1, ',')) . "</p>";
-            // echo "          <p><strong>Média Final:</strong> " . htmlspecialchars(number_format($media, 1, ',')) . "</p>";
-            // echo "          <p><strong>Status:</strong> <span class='status " . $status_classe . "'>" . $status_texto . "</span></p>";
+            echo "          <p><strong>Média Final:</strong> " . htmlspecialchars(number_format($media, 1, ',')) . "</p>";
+            echo "          <p><strong>Faltas:</strong> " . htmlspecialchars(number_format($faltas)) . "</p>";
+            echo "          <p><strong>Frequência:</strong> " . htmlspecialchars(number_format($frequencia)) . "%</p>";
+            echo "          <p><strong>Status:</strong> <span class='status " . $status_classe . "'>" . $status_texto . "</span></p>";
             
             echo '      </div>';
 
@@ -99,7 +97,7 @@ $dados_das_materias = lerDados();
         echo "<h1>Nenhuma matéria selecionada!</h1>";
     }
     $page_content = ob_get_clean();
-    include 'masterA.php'; 
+    include 'masterP.php'; 
     ?>
 </body>
 </html>
