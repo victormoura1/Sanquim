@@ -3,18 +3,13 @@
         "titulo": "Matemática",
         "professor": "João",
         "nota1": 10,
-        "nota2": 6,
-        "taulas": 8,
-        "faltas": 2
+        "nota2": 2
     },
     "lingua-portuguesa": {
         "titulo": "Língua Portuguesa",
         "professor": "João",
-        "nota1": 8,
-        "nota2": 3,
-        "presenca": 0,
-        "faltas": 1,
-        "taulas": 2
+        "nota1": 10,
+        "nota2": 5
     },
     "sociologia": {
         "titulo": "Sociologia",
